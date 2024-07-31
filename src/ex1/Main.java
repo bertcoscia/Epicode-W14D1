@@ -20,11 +20,11 @@ public class Main {
         do {
             System.out.println("Choose a number between 1 and 5. Press 0 to exit");
             index = Integer.parseInt(scanner.nextLine());
-            if (index > arr.length || index < 0) System.out.println("Number not valid");
+            if (index > arr.length || index < 0) System.err.println("Number not valid");
             else if (index != 0) {
                 System.out.println("Choose a number between 1 and 10");
                 newNum = Integer.parseInt(scanner.nextLine());
-                if (newNum > 10 || newNum < 1) System.out.println("Number not valid");
+                if (newNum > 10 || newNum < 1) System.err.println("Number not valid");
                 else arr[index - 1] = newNum;
             }
             System.out.println(Arrays.toString(arr));
